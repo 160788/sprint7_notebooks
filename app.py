@@ -17,3 +17,16 @@ if hist_button: # al hacer clic en el botón
         
             # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
+
+hist_button = st.button('Construir gráfico de dispersión') # crear un botón
+        
+if hist_button: # al hacer clic en el botón
+            # escribir un mensaje
+    st.write('Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
+    if "odometer" in df.columns and "price" in df.columns:        
+            # crear un histograma
+        fig2 = px.scatter(df, x="odometer", y="price", title="Precio vs Odómetro")
+        st.plotly_chart(fig2,use_container_width=True)
+    else:
+        st.write("Las columnas necesarias para el gráfico no están disponibles")
+        
