@@ -29,4 +29,12 @@ if hist_button: # al hacer clic en el botón
         st.plotly_chart(fig2,use_container_width=True)
     else:
         st.write("Las columnas necesarias para el gráfico no están disponibles")
+
+[server]
+headless = true
+port = 10000
+
+[browser]
+serverAddress = "0.0.0.0"
+serverPort = 10000
         
