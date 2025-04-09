@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+st.header('Mostramos gráfico de histograma y de dispersión con datos de venta de coches')
 
 df=pd.read_csv("vehicles_us.csv")
 
